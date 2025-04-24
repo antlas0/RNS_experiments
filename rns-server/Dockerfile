@@ -11,6 +11,7 @@ RUN apt-get update \
 
 RUN useradd -ms /bin/bash runner
 RUN usermod -aG sudo runner
+RUN echo "%sudo   ALL=(ALL:ALL) NOPASSWD:ALL" > /etc/sudoers
 
 COPY --chmod=0755 entrypoint.sh /entrypoint.sh
 
