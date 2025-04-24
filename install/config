@@ -29,7 +29,7 @@
   # user, and should generally be turned on. This directive
   # is optional and can be removed for brevity.
   
-  share_instance = No
+  share_instance = Yes
   
   
   # If you want to run multiple *different* shared instances
@@ -48,7 +48,7 @@
   # an optional directive, and can be left out for brevity.
   # This behaviour is disabled by default.
   
-  panic_on_interface_error = No
+  panic_on_interface_error = Yes
 
 
 [logging]
@@ -84,8 +84,9 @@
     type = AutoInterface
     enabled = false
 
- [[TCP Server Interface]]
+ [[TCPServer Interface]]
   type = TCPServerInterface
   enabled = yes
+  mode = gateway
   listen_ip = CFG_RETICULUM_LISTEN_IP
   listen_port = CFG_RETICULUM_LISTEN_PORT
