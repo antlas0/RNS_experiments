@@ -9,4 +9,4 @@
 sed -i "s/CFG_RETICULUM_LISTEN_IP/$TCP_SERVER_LISTEN_IP/g" $CONFIG_FILE_PATH
 sed -i "s/CFG_RETICULUM_LISTEN_PORT/$TCP_SERVER_LISTEN_PORT/g" $CONFIG_FILE_PATH
 
-exec /bin/bash --login -c "$@"
+exec /bin/bash --login -c "$*"
