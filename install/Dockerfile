@@ -1,4 +1,4 @@
-FROM python:3.11-bookworm
+ROM python:3.11-bookworm
 
 ENV TCP_SERVER_LISTEN_IP="0.0.0.0"
 ENV TCP_SERVER_LISTEN_PORT=45454
@@ -24,4 +24,4 @@ RUN pipx install rns \
       && pipx ensurepath
 
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["rnsd"]
+CMD ["rnsd", "-v"]
