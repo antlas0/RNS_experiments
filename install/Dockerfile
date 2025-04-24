@@ -10,8 +10,11 @@ RUN usermod -aG sudo runner
 
 COPY --chmod 0755 entrypoint.sh /entrypoint.sh
 
-WORKDIR /home/runner
 USER runner
+WORKDIR /home/runner
+
+RUN mkdir -p .reticulum/interfaces
+COPY config.interface .reticulum/interfaces/config.interface
 
 RUN python -m venv --copies .venv
 ENV PATH="/home/runner/.venv:$PATH"
